@@ -2,6 +2,10 @@
 
 FROM python:3-alpine
 
+LABEL org.opencontainers.image.source=https://github.com/skydrinker-tox/cookiecutter-image
+LABEL org.opencontainers.image.description="Rootless image with pre-installed Cookiecutter, based on python:3-alpine image"
+LABEL org.opencontainers.image.licenses=MIT
+
 ARG IMAGE_USER
 ENV IMAGE_USER=${IMAGE_USER:-cookiemaker}
 ENV PATH="/home/${IMAGE_USER}/.local/bin:${PATH}"
