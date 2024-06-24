@@ -16,7 +16,7 @@ USER root
 RUN adduser -D ${IMAGE_USER}
 
 RUN apk --no-cache update &&\
-    apk --no-cache add bash git jq &&\
+    apk --no-cache add bash git jq curl &&\
 	python3 -m pip install --upgrade pip &&\
 	python3 -m pip install --upgrade setuptools &&\
 	mkdir -p ${COOKIE_WORKDIR} &&\
